@@ -1,0 +1,86 @@
+<!DOCTYPE Rechnung [
+        <!ELEMENT Rechnung (AuftragsNr,AufragsDatum,RechnungsDatum,KundenNr,KundenName,Adressen,Positionen,TotalPreis,TotalMWST)>
+        <!ELEMENT AuftragsNr (#PCDATA)>
+        <!ELEMENT AufragsDatum (#PCDATA)>
+        <!ELEMENT RechnungsDatum (#PCDATA)>
+        <!ELEMENT KundenNr (#PCDATA)>
+        <!ELEMENT KundenName (#PCDATA)>
+        <!ELEMENT Adressen (Absender,Empfaenger)>
+        <!ELEMENT Absender (Firma?,Anrede,Vorname,Name,Strasse,StrasseNr,PLZ,Ort,Land)>
+        <!ELEMENT Firma (#PCDATA)>
+        <!ELEMENT Anrede (#PCDATA)>
+        <!ELEMENT Vorname (#PCDATA)>
+        <!ELEMENT Name (#PCDATA)>
+        <!ELEMENT Strasse (#PCDATA)>
+        <!ELEMENT StrasseNr (#PCDATA)>
+        <!ELEMENT PLZ (#PCDATA)>
+        <!ELEMENT Ort (#PCDATA)>
+        <!ELEMENT Land (#PCDATA)>
+        <!ELEMENT Empfaenger (Firma?,Anrede,Vorname,Name,Strasse,StrasseNr,PLZ,Ort,Land)>
+        <!ELEMENT Positionen (Artikel)+>
+        <!ELEMENT Artikel (ArtikelNummer,Bezeichnung,Menge,ArtikelPreis,Waehrung,MWST,MWSTSatz,TotalPreis)>
+        <!ELEMENT ArtikelNummer (#PCDATA)>
+        <!ELEMENT Bezeichnung (#PCDATA)>
+        <!ELEMENT Menge (#PCDATA)>
+        <!ELEMENT ArtikelPreis (#PCDATA)>
+        <!ELEMENT Waehrung (#PCDATA)>
+        <!ELEMENT MWST (#PCDATA)>
+        <!ELEMENT MWSTSatz (#PCDATA)>
+        <!ELEMENT TotalPreis (#PCDATA)>
+        <!ELEMENT TotalMWST (#PCDATA)>
+        ]>
+<Rechnung>
+    <AuftragsNr>123456</AuftragsNr>
+    <AufragsDatum>2023-01-01</AufragsDatum>
+    <RechnungsDatum>2023-01-02</RechnungsDatum>
+    <KundenNr>123456</KundenNr>
+    <KundenName>Muster AG</KundenName>
+    <Adressen>
+        <Absender>
+            <Firma>Reitartikelversand Express AG</Firma>
+            <Anrede>Herr</Anrede>
+            <Vorname>Philipp</Vorname>
+            <Name>Martin</Name>
+            <Strasse>Rauracherweg</Strasse>
+            <StrasseNr>10</StrasseNr>
+            <PLZ>4132</PLZ>
+            <Ort>Muttenz</Ort>
+            <Land>Schweiz</Land>
+        </Absender>
+        <Empfaenger>
+            <Firma>Muster AG</Firma>
+            <Anrede>Herr</Anrede>
+            <Vorname>Hans</Vorname>
+            <Name>Muster</Name>
+            <Strasse>Musterstrasse</Strasse>
+            <StrasseNr>1</StrasseNr>
+            <PLZ>4132</PLZ>
+            <Ort>Muttenz</Ort>
+            <Land>Schweiz</Land>
+        </Empfaenger>
+    </Adressen>
+    <Positionen>
+        <Artikel>
+            <ArtikelNummer>10000001</ArtikelNummer>
+            <Bezeichnung>Sattel</Bezeichnung>
+            <Menge>1</Menge>
+            <ArtikelPreis>500</ArtikelPreis>
+            <Waehrung>CHF</Waehrung>
+            <MWST>38.5</MWST>
+            <MWSTSatz>7.7</MWSTSatz>
+            <TotalPreis>538.5</TotalPreis>
+        </Artikel>
+        <Artikel>
+            <ArtikelNummer>20000001</ArtikelNummer>
+            <Bezeichnung>Stiefel</Bezeichnung>
+            <Menge>2</Menge>
+            <ArtikelPreis>200</ArtikelPreis>
+            <Waehrung>CHF</Waehrung>
+            <MWST>30.8</MWST>
+            <MWSTSatz>7.7</MWSTSatz>
+            <TotalPreis>430.8</TotalPreis>
+        </Artikel>
+    </Positionen>
+    <TotalPreis>969.3</TotalPreis>
+    <TotalMWST>69.3</TotalMWST>
+</Rechnung>

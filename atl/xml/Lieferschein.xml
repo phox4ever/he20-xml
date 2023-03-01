@@ -1,0 +1,72 @@
+<!DOCTYPE Lieferschein [
+        <!ELEMENT Lieferschein (AuftragsNr,AufragsDatum,KundenNr,KundenName,Adressen,Lieferung)>
+        <!ELEMENT AuftragsNr (#PCDATA)>
+        <!ELEMENT AufragsDatum (#PCDATA)>
+        <!ELEMENT KundenNr (#PCDATA)>
+        <!ELEMENT KundenName (#PCDATA)>
+        <!ELEMENT Adressen (Absender, Empfaenger)>
+        <!ELEMENT Absender (Firma?,Anrede,Vorname,Name,Strasse,StrasseNr,PLZ,Ort,Land)>
+        <!ELEMENT Empfaenger (Firma?,Anrede,Vorname,Name,Strasse,StrasseNr,PLZ,Ort,Land)>
+        <!ELEMENT Firma (#PCDATA)>
+        <!ELEMENT Anrede (#PCDATA)>
+        <!ELEMENT Vorname (#PCDATA)>
+        <!ELEMENT Name (#PCDATA)>
+        <!ELEMENT Strasse (#PCDATA)>
+        <!ELEMENT StrasseNr (#PCDATA)>
+        <!ELEMENT PLZ (#PCDATA)>
+        <!ELEMENT Ort (#PCDATA)>
+        <!ELEMENT Land (#PCDATA)>
+        <!ELEMENT Lieferung (Artikel)+>
+        <!ELEMENT Artikel (ArtikelNummer,Bezeichnung,Menge,VersandDatum,GeplantesLieferDatum)>
+        <!ELEMENT ArtikelNummer (#PCDATA)>
+        <!ELEMENT Bezeichnung (#PCDATA)>
+        <!ELEMENT Menge (#PCDATA)>
+        <!ELEMENT VersandDatum (#PCDATA)>
+        <!ELEMENT GeplantesLieferDatum (#PCDATA)>
+        ]>
+<Lieferschein>
+    <AuftragsNr>123456</AuftragsNr>
+    <AufragsDatum>2023-01-01</AufragsDatum>
+    <KundenNr>123456</KundenNr>
+    <KundenName>Muster AG</KundenName>
+    <Adressen>
+        <Absender>
+            <Firma>Reitartikelversand Express AG</Firma>
+            <Anrede>Herr</Anrede>
+            <Vorname>Philipp</Vorname>
+            <Name>Martin</Name>
+            <Strasse>Rauracherweg</Strasse>
+            <StrasseNr>10</StrasseNr>
+            <PLZ>4132</PLZ>
+            <Ort>Muttenz</Ort>
+            <Land>Schweiz</Land>
+        </Absender>
+        <Empfaenger>
+            <Firma>Muster AG</Firma>
+            <Anrede>Herr</Anrede>
+            <Vorname>Hans</Vorname>
+            <Name>Muster</Name>
+            <Strasse>Musterstrasse</Strasse>
+            <StrasseNr>1</StrasseNr>
+            <PLZ>4132</PLZ>
+            <Ort>Muttenz</Ort>
+            <Land>Schweiz</Land>
+        </Empfaenger>
+    </Adressen>
+    <Lieferung>
+        <Artikel>
+            <ArtikelNummer>10000001</ArtikelNummer>
+            <Bezeichnung>Sattel</Bezeichnung>
+            <Menge>1</Menge>
+            <VersandDatum>2023-01-08</VersandDatum>
+            <GeplantesLieferDatum>2023-01-10</GeplantesLieferDatum>
+        </Artikel>
+        <Artikel>
+            <ArtikelNummer>20000001</ArtikelNummer>
+            <Bezeichnung>Stiefel</Bezeichnung>
+            <Menge>2</Menge>
+            <VersandDatum>2023-01-08</VersandDatum>
+            <GeplantesLieferDatum>2023-01-10</GeplantesLieferDatum>
+        </Artikel>
+    </Lieferung>
+</Lieferschein>
