@@ -2,7 +2,7 @@
 <!DOCTYPE Lieferschein SYSTEM "Lieferschein.dtd">
 <Lieferschein xmlns="https://www.w3schools.com/lieferschein"
               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-              xsi:schemaLocation="https://www.w3schools.com/lieferschein Lieferschein.xsd">
+              xsi:schemaLocation="https://www.w3schools.com/lieferschein schema/Lieferschein.xsd">
     <AuftragsNr>123456</AuftragsNr>
     <AufragsDatum>2023-01-01</AufragsDatum>
     <KundenNr>123456</KundenNr>

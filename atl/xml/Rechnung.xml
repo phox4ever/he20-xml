@@ -2,7 +2,7 @@
 <!DOCTYPE Rechnung SYSTEM "Rechnung.dtd">
 <Rechnung  xmlns="https://www.w3schools.com/rechung"
            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-           xsi:schemaLocation="https://www.w3schools.com/rechung Rechnung.xsd">
+           xsi:schemaLocation="https://www.w3schools.com/rechung schema/Rechnung.xsd">
     <AuftragsNr>123456</AuftragsNr>
     <AufragsDatum>2023-01-01</AufragsDatum>
     <RechnungsDatum>2023-01-02</RechnungsDatum>

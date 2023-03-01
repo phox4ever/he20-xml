@@ -2,7 +2,7 @@
 <!DOCTYPE Bestellung SYSTEM "Bestellung.dtd">
 <Bestellung xmlns="https://www.w3schools.com/bestellung"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-            xsi:schemaLocation="https://www.w3schools.com/bestellung Bestellung.xsd">
+            xsi:schemaLocation="https://www.w3schools.com/bestellung schema/Bestellung.xsd">
     <BestellNr>123456</BestellNr>
     <BestellDatum>2023-01-01</BestellDatum>
     <BestellZeit>12:00:00</BestellZeit>
