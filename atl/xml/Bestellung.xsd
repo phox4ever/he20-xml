@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="https://www.w3schools.com/bestellung" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Anrede" type="xs:string"/>
+  <xs:element name="Vorname" type="xs:string"/>
+  <xs:element name="Name" type="xs:string"/>
+  <xs:element name="Strasse" type="xs:string"/>
+  <xs:element name="StrasseNr" type="xs:byte"/>
+  <xs:element name="PLZ" type="xs:short"/>
+  <xs:element name="Ort" type="xs:string"/>
+  <xs:element name="Land" type="xs:string"/>
+  <xs:element name="Firma" type="xs:string"/>
+  <xs:element name="Rechnungsadresse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="bes:Anrede" xmlns:bes="https://www.w3schools.com/bestellung"/>
+        <xs:element ref="bes:Vorname" xmlns:bes="https://www.w3schools.com/bestellung"/>
+        <xs:element ref="bes:Name" xmlns:bes="https://www.w3schools.com/bestellung"/>
+        <xs:element ref="bes:Strasse" xmlns:bes="https://www.w3schools.com/bestellung"/>
+        <xs:element ref="bes:StrasseNr" xmlns:bes="https://www.w3schools.com/bestellung"/>
+        <xs:element ref="bes:PLZ" xmlns:bes="https://www.w3schools.com/bestellung"/>
+        <xs:element ref="bes:Ort" xmlns:bes="https://www.w3schools.com/bestellung"/>
+        <xs:element ref="bes:Land" xmlns:bes="https://www.w3schools.com/bestellung"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Lieferadresse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="bes:Firma" xmlns:bes="https://www.w3schools.com/bestellung"/>
+        <xs:element ref="bes:Anrede" xmlns:bes="https://www.w3schools.com/bestellung"/>
+        <xs:element ref="bes:Vorname" xmlns:bes="https://www.w3schools.com/bestellung"/>
+        <xs:element ref="bes:Name" xmlns:bes="https://www.w3schools.com/bestellung"/>
+        <xs:element ref="bes:Strasse" xmlns:bes="https://www.w3schools.com/bestellung"/>
+        <xs:element ref="bes:StrasseNr" xmlns:bes="https://www.w3schools.com/bestellung"/>
+        <xs:element ref="bes:PLZ" xmlns:bes="https://www.w3schools.com/bestellung"/>
+        <xs:element ref="bes:Ort" xmlns:bes="https://www.w3schools.com/bestellung"/>
+        <xs:element ref="bes:Land" xmlns:bes="https://www.w3schools.com/bestellung"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ArtikelNummer" type="xs:int"/>
+  <xs:element name="Bezeichnung" type="xs:string"/>
+  <xs:element name="Menge" type="xs:byte"/>
+  <xs:element name="ArtikelPreis" type="xs:short"/>
+  <xs:element name="Waehrung" type="xs:string"/>
+  <xs:element name="MWST" type="xs:float"/>
+  <xs:element name="MWSTSatz" type="xs:float"/>
+  <xs:element name="TotalPreis" type="xs:float"/>
+  <xs:element name="Artikel">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="bes:ArtikelNummer" xmlns:bes="https://www.w3schools.com/bestellung"/>
+        <xs:element ref="bes:Bezeichnung" xmlns:bes="https://www.w3schools.com/bestellung"/>
+        <xs:element ref="bes:Menge" xmlns:bes="https://www.w3schools.com/bestellung"/>
+        <xs:element ref="bes:ArtikelPreis" xmlns:bes="https://www.w3schools.com/bestellung"/>
+        <xs:element ref="bes:Waehrung" xmlns:bes="https://www.w3schools.com/bestellung"/>
+        <xs:element ref="bes:MWST" xmlns:bes="https://www.w3schools.com/bestellung"/>
+        <xs:element ref="bes:MWSTSatz" xmlns:bes="https://www.w3schools.com/bestellung"/>
+        <xs:element ref="bes:TotalPreis" xmlns:bes="https://www.w3schools.com/bestellung"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BestellNr" type="xs:int"/>
+  <xs:element name="BestellDatum" type="xs:date"/>
+  <xs:element name="BestellZeit" type="xs:time"/>
+  <xs:element name="KundenNr" type="xs:int"/>
+  <xs:element name="KundenName" type="xs:string"/>
+  <xs:element name="Adressen">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="bes:Rechnungsadresse" xmlns:bes="https://www.w3schools.com/bestellung"/>
+        <xs:element ref="bes:Lieferadresse" xmlns:bes="https://www.w3schools.com/bestellung"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Warenkorb">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="bes:Artikel" maxOccurs="unbounded" minOccurs="0" xmlns:bes="https://www.w3schools.com/bestellung"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TotalMWST" type="xs:float"/>
+  <xs:element name="Bestellung">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="bes:BestellNr" xmlns:bes="https://www.w3schools.com/bestellung"/>
+        <xs:element ref="bes:BestellDatum" xmlns:bes="https://www.w3schools.com/bestellung"/>
+        <xs:element ref="bes:BestellZeit" xmlns:bes="https://www.w3schools.com/bestellung"/>
+        <xs:element ref="bes:KundenNr" xmlns:bes="https://www.w3schools.com/bestellung"/>
+        <xs:element ref="bes:KundenName" xmlns:bes="https://www.w3schools.com/bestellung"/>
+        <xs:element ref="bes:Adressen" xmlns:bes="https://www.w3schools.com/bestellung"/>
+        <xs:element ref="bes:Warenkorb" xmlns:bes="https://www.w3schools.com/bestellung"/>
+        <xs:element ref="bes:TotalPreis" xmlns:bes="https://www.w3schools.com/bestellung"/>
+        <xs:element ref="bes:TotalMWST" xmlns:bes="https://www.w3schools.com/bestellung"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

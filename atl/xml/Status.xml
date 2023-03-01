@@ -1,15 +1,8 @@
-<!DOCTYPE Status [
-        <!ELEMENT Status (AuftragsNr,AufragsDatum,KundenNr,KundenName,LieferStatus,MengeTotal,OffeneMenge,DatumAktualisiert)>
-        <!ELEMENT AuftragsNr (#PCDATA)>
-        <!ELEMENT AufragsDatum (#PCDATA)>
-        <!ELEMENT KundenNr (#PCDATA)>
-        <!ELEMENT KundenName (#PCDATA)>
-        <!ELEMENT LieferStatus (#PCDATA)>
-        <!ELEMENT MengeTotal (#PCDATA)>
-        <!ELEMENT OffeneMenge (#PCDATA)>
-        <!ELEMENT DatumAktualisiert (#PCDATA)>
-        ]>
-<Status>
+<?xml version="1.0"?>
+<!DOCTYPE Status SYSTEM "Status.dtd">
+<Status  xmlns="https://www.w3schools.com/status"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://www.w3schools.com/status Status.xsd">
     <AuftragsNr>123456</AuftragsNr>
     <AufragsDatum>2023-01-01</AufragsDatum>
     <KundenNr>123456</KundenNr>
@@ -17,5 +10,7 @@
     <LieferStatus>Beim Kunden</LieferStatus>
     <MengeTotal>3</MengeTotal>
     <OffeneMenge>0</OffeneMenge>
+    <VersandteMenge>3</VersandteMenge>
+    <StornierteMenge>0</StornierteMenge>
     <DatumAktualisiert>2023-01-08</DatumAktualisiert>
 </Status>

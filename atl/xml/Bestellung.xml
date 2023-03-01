@@ -1,35 +1,8 @@
-<!DOCTYPE Bestellung [
-        <!ELEMENT Bestellung (BestellNr,BestellDatum,BestellZeit,KundenNr,KundenName,Adressen,Warenkorb,TotalPreis,TotalMWST)>
-        <!ELEMENT BestellNr (#PCDATA)>
-        <!ELEMENT BestellDatum (#PCDATA)>
-        <!ELEMENT BestellZeit (#PCDATA)>
-        <!ELEMENT KundenNr (#PCDATA)>
-        <!ELEMENT KundenName (#PCDATA)>
-        <!ELEMENT Adressen (Rechnungsadresse, Lieferadresse)>
-        <!ELEMENT Rechnungsadresse (Firma?,Anrede,Vorname,Name,Strasse,StrasseNr,PLZ,Ort,Land)>
-        <!ELEMENT Lieferadresse (Firma?,Anrede,Vorname,Name,Strasse,StrasseNr,PLZ,Ort,Land)>
-        <!ELEMENT Firma (#PCDATA)>
-        <!ELEMENT Anrede (#PCDATA)>
-        <!ELEMENT Vorname (#PCDATA)>
-        <!ELEMENT Name (#PCDATA)>
-        <!ELEMENT Strasse (#PCDATA)>
-        <!ELEMENT StrasseNr (#PCDATA)>
-        <!ELEMENT PLZ (#PCDATA)>
-        <!ELEMENT Ort (#PCDATA)>
-        <!ELEMENT Land (#PCDATA)>
-        <!ELEMENT Warenkorb (Artikel)+>
-        <!ELEMENT Artikel (ArtikelNummer,Bezeichnung,Menge,ArtikelPreis,Waehrung,MWST,MWSTSatz,TotalPreis)>
-        <!ELEMENT ArtikelNummer (#PCDATA)>
-        <!ELEMENT Bezeichnung (#PCDATA)>
-        <!ELEMENT Menge (#PCDATA)>
-        <!ELEMENT ArtikelPreis (#PCDATA)>
-        <!ELEMENT Waehrung (#PCDATA)>
-        <!ELEMENT MWST (#PCDATA)>
-        <!ELEMENT MWSTSatz (#PCDATA)>
-        <!ELEMENT TotalPreis (#PCDATA)>
-        <!ELEMENT TotalMWST (#PCDATA)>
-        ]>
-<Bestellung>
+<?xml version="1.0"?>
+<!DOCTYPE Bestellung SYSTEM "Bestellung.dtd">
+<Bestellung xmlns="https://www.w3schools.com/bestellung"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="https://www.w3schools.com/bestellung Bestellung.xsd">
     <BestellNr>123456</BestellNr>
     <BestellDatum>2023-01-01</BestellDatum>
     <BestellZeit>12:00:00</BestellZeit>

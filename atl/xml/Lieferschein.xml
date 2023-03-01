@@ -1,30 +1,8 @@
-<!DOCTYPE Lieferschein [
-        <!ELEMENT Lieferschein (AuftragsNr,AufragsDatum,KundenNr,KundenName,Adressen,Lieferung)>
-        <!ELEMENT AuftragsNr (#PCDATA)>
-        <!ELEMENT AufragsDatum (#PCDATA)>
-        <!ELEMENT KundenNr (#PCDATA)>
-        <!ELEMENT KundenName (#PCDATA)>
-        <!ELEMENT Adressen (Absender, Empfaenger)>
-        <!ELEMENT Absender (Firma?,Anrede,Vorname,Name,Strasse,StrasseNr,PLZ,Ort,Land)>
-        <!ELEMENT Empfaenger (Firma?,Anrede,Vorname,Name,Strasse,StrasseNr,PLZ,Ort,Land)>
-        <!ELEMENT Firma (#PCDATA)>
-        <!ELEMENT Anrede (#PCDATA)>
-        <!ELEMENT Vorname (#PCDATA)>
-        <!ELEMENT Name (#PCDATA)>
-        <!ELEMENT Strasse (#PCDATA)>
-        <!ELEMENT StrasseNr (#PCDATA)>
-        <!ELEMENT PLZ (#PCDATA)>
-        <!ELEMENT Ort (#PCDATA)>
-        <!ELEMENT Land (#PCDATA)>
-        <!ELEMENT Lieferung (Artikel)+>
-        <!ELEMENT Artikel (ArtikelNummer,Bezeichnung,Menge,VersandDatum,GeplantesLieferDatum)>
-        <!ELEMENT ArtikelNummer (#PCDATA)>
-        <!ELEMENT Bezeichnung (#PCDATA)>
-        <!ELEMENT Menge (#PCDATA)>
-        <!ELEMENT VersandDatum (#PCDATA)>
-        <!ELEMENT GeplantesLieferDatum (#PCDATA)>
-        ]>
-<Lieferschein>
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE Lieferschein SYSTEM "Lieferschein.dtd">
+<Lieferschein xmlns="https://www.w3schools.com/lieferschein"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="https://www.w3schools.com/lieferschein Lieferschein.xsd">
     <AuftragsNr>123456</AuftragsNr>
     <AufragsDatum>2023-01-01</AufragsDatum>
     <KundenNr>123456</KundenNr>

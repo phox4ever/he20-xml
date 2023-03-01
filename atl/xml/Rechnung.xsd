@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="https://www.w3schools.com/rechung" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Firma" type="xs:string"/>
+  <xs:element name="Anrede" type="xs:string"/>
+  <xs:element name="Vorname" type="xs:string"/>
+  <xs:element name="Name" type="xs:string"/>
+  <xs:element name="Strasse" type="xs:string"/>
+  <xs:element name="StrasseNr" type="xs:int"/>
+  <xs:element name="PLZ" type="xs:int"/>
+  <xs:element name="Ort" type="xs:string"/>
+  <xs:element name="Land" type="xs:string"/>
+  <xs:element name="Absender">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="rec:Firma" xmlns:rec="https://www.w3schools.com/rechung"/>
+        <xs:element ref="rec:Anrede" xmlns:rec="https://www.w3schools.com/rechung"/>
+        <xs:element ref="rec:Vorname" xmlns:rec="https://www.w3schools.com/rechung"/>
+        <xs:element ref="rec:Name" xmlns:rec="https://www.w3schools.com/rechung"/>
+        <xs:element ref="rec:Strasse" xmlns:rec="https://www.w3schools.com/rechung"/>
+        <xs:element ref="rec:StrasseNr" xmlns:rec="https://www.w3schools.com/rechung"/>
+        <xs:element ref="rec:PLZ" xmlns:rec="https://www.w3schools.com/rechung"/>
+        <xs:element ref="rec:Ort" xmlns:rec="https://www.w3schools.com/rechung"/>
+        <xs:element ref="rec:Land" xmlns:rec="https://www.w3schools.com/rechung"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Empfaenger">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="rec:Firma" xmlns:rec="https://www.w3schools.com/rechung"/>
+        <xs:element ref="rec:Anrede" xmlns:rec="https://www.w3schools.com/rechung"/>
+        <xs:element ref="rec:Vorname" xmlns:rec="https://www.w3schools.com/rechung"/>
+        <xs:element ref="rec:Name" xmlns:rec="https://www.w3schools.com/rechung"/>
+        <xs:element ref="rec:Strasse" xmlns:rec="https://www.w3schools.com/rechung"/>
+        <xs:element ref="rec:StrasseNr" xmlns:rec="https://www.w3schools.com/rechung"/>
+        <xs:element ref="rec:PLZ" xmlns:rec="https://www.w3schools.com/rechung"/>
+        <xs:element ref="rec:Ort" xmlns:rec="https://www.w3schools.com/rechung"/>
+        <xs:element ref="rec:Land" xmlns:rec="https://www.w3schools.com/rechung"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ArtikelNummer" type="xs:int"/>
+  <xs:element name="Bezeichnung" type="xs:string"/>
+  <xs:element name="Menge" type="xs:int"/>
+  <xs:element name="ArtikelPreis" type="xs:int"/>
+  <xs:element name="Waehrung" type="xs:string"/>
+  <xs:element name="MWST" type="xs:float"/>
+  <xs:element name="MWSTSatz" type="xs:float"/>
+  <xs:element name="TotalPreis" type="xs:float"/>
+  <xs:element name="Artikel">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="rec:ArtikelNummer" xmlns:rec="https://www.w3schools.com/rechung"/>
+        <xs:element ref="rec:Bezeichnung" xmlns:rec="https://www.w3schools.com/rechung"/>
+        <xs:element ref="rec:Menge" xmlns:rec="https://www.w3schools.com/rechung"/>
+        <xs:element ref="rec:ArtikelPreis" xmlns:rec="https://www.w3schools.com/rechung"/>
+        <xs:element ref="rec:Waehrung" xmlns:rec="https://www.w3schools.com/rechung"/>
+        <xs:element ref="rec:MWST" xmlns:rec="https://www.w3schools.com/rechung"/>
+        <xs:element ref="rec:MWSTSatz" xmlns:rec="https://www.w3schools.com/rechung"/>
+        <xs:element ref="rec:TotalPreis" xmlns:rec="https://www.w3schools.com/rechung"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AuftragsNr" type="xs:int"/>
+  <xs:element name="AufragsDatum" type="xs:date"/>
+  <xs:element name="RechnungsDatum" type="xs:date"/>
+  <xs:element name="KundenNr" type="xs:int"/>
+  <xs:element name="KundenName" type="xs:string"/>
+  <xs:element name="Adressen">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="rec:Absender" xmlns:rec="https://www.w3schools.com/rechung"/>
+        <xs:element ref="rec:Empfaenger" xmlns:rec="https://www.w3schools.com/rechung"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Positionen">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="rec:Artikel" maxOccurs="unbounded" minOccurs="1" xmlns:rec="https://www.w3schools.com/rechung"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TotalMWST" type="xs:float"/>
+  <xs:element name="Rechnung">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="rec:AuftragsNr" xmlns:rec="https://www.w3schools.com/rechung"/>
+        <xs:element ref="rec:AufragsDatum" xmlns:rec="https://www.w3schools.com/rechung"/>
+        <xs:element ref="rec:RechnungsDatum" xmlns:rec="https://www.w3schools.com/rechung"/>
+        <xs:element ref="rec:KundenNr" xmlns:rec="https://www.w3schools.com/rechung"/>
+        <xs:element ref="rec:KundenName" xmlns:rec="https://www.w3schools.com/rechung"/>
+        <xs:element ref="rec:Adressen" xmlns:rec="https://www.w3schools.com/rechung"/>
+        <xs:element ref="rec:Positionen" xmlns:rec="https://www.w3schools.com/rechung"/>
+        <xs:element ref="rec:TotalPreis" xmlns:rec="https://www.w3schools.com/rechung"/>
+        <xs:element ref="rec:TotalMWST" xmlns:rec="https://www.w3schools.com/rechung"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

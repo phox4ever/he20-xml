@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="https://www.w3schools.com/status" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Status">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element type="xs:int" name="AuftragsNr"/>
+        <xs:element type="xs:date" name="AufragsDatum"/>
+        <xs:element type="xs:int" name="KundenNr"/>
+        <xs:element type="xs:string" name="KundenName"/>
+        <xs:element name="LieferStatus">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="Offen"/>
+              <xs:enumeration value="In Bearbeitung"/>
+              <xs:enumeration value="Versendet"/>
+              <xs:enumeration value="Beim Kunden"/>
+              <xs:enumeration value="Storniert"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="MengeTotal">
+          <xs:simpleType>
+            <xs:restriction base="xs:int">
+              <xs:minInclusive value="1"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element type="xs:int" name="OffeneMenge"/>
+        <xs:element type="xs:int" name="VersandteMenge"/>
+        <xs:element type="xs:int" name="StornierteMenge"/>
+        <xs:element type="xs:date" name="DatumAktualisiert"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="https://www.w3schools.com/lieferschein" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Firma" type="xs:string"/>
+  <xs:element name="Anrede" type="xs:string"/>
+  <xs:element name="Vorname" type="xs:string"/>
+  <xs:element name="Name" type="xs:string"/>
+  <xs:element name="Strasse" type="xs:string"/>
+  <xs:element name="StrasseNr" type="xs:byte"/>
+  <xs:element name="PLZ" type="xs:short"/>
+  <xs:element name="Ort" type="xs:string"/>
+  <xs:element name="Land" type="xs:string"/>
+  <xs:element name="Absender">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="lief:Firma" xmlns:lief="https://www.w3schools.com/lieferschein"/>
+        <xs:element ref="lief:Anrede" xmlns:lief="https://www.w3schools.com/lieferschein"/>
+        <xs:element ref="lief:Vorname" xmlns:lief="https://www.w3schools.com/lieferschein"/>
+        <xs:element ref="lief:Name" xmlns:lief="https://www.w3schools.com/lieferschein"/>
+        <xs:element ref="lief:Strasse" xmlns:lief="https://www.w3schools.com/lieferschein"/>
+        <xs:element ref="lief:StrasseNr" xmlns:lief="https://www.w3schools.com/lieferschein"/>
+        <xs:element ref="lief:PLZ" xmlns:lief="https://www.w3schools.com/lieferschein"/>
+        <xs:element ref="lief:Ort" xmlns:lief="https://www.w3schools.com/lieferschein"/>
+        <xs:element ref="lief:Land" xmlns:lief="https://www.w3schools.com/lieferschein"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Empfaenger">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="lief:Firma" xmlns:lief="https://www.w3schools.com/lieferschein"/>
+        <xs:element ref="lief:Anrede" xmlns:lief="https://www.w3schools.com/lieferschein"/>
+        <xs:element ref="lief:Vorname" xmlns:lief="https://www.w3schools.com/lieferschein"/>
+        <xs:element ref="lief:Name" xmlns:lief="https://www.w3schools.com/lieferschein"/>
+        <xs:element ref="lief:Strasse" xmlns:lief="https://www.w3schools.com/lieferschein"/>
+        <xs:element ref="lief:StrasseNr" xmlns:lief="https://www.w3schools.com/lieferschein"/>
+        <xs:element ref="lief:PLZ" xmlns:lief="https://www.w3schools.com/lieferschein"/>
+        <xs:element ref="lief:Ort" xmlns:lief="https://www.w3schools.com/lieferschein"/>
+        <xs:element ref="lief:Land" xmlns:lief="https://www.w3schools.com/lieferschein"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ArtikelNummer" type="xs:int"/>
+  <xs:element name="Bezeichnung" type="xs:string"/>
+  <xs:element name="Menge" type="xs:byte"/>
+  <xs:element name="VersandDatum" type="xs:date"/>
+  <xs:element name="GeplantesLieferDatum" type="xs:date"/>
+  <xs:element name="Artikel">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="lief:ArtikelNummer" xmlns:lief="https://www.w3schools.com/lieferschein"/>
+        <xs:element ref="lief:Bezeichnung" xmlns:lief="https://www.w3schools.com/lieferschein"/>
+        <xs:element ref="lief:Menge" xmlns:lief="https://www.w3schools.com/lieferschein"/>
+        <xs:element ref="lief:VersandDatum" xmlns:lief="https://www.w3schools.com/lieferschein"/>
+        <xs:element ref="lief:GeplantesLieferDatum" xmlns:lief="https://www.w3schools.com/lieferschein"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AuftragsNr" type="xs:int"/>
+  <xs:element name="AufragsDatum" type="xs:date"/>
+  <xs:element name="KundenNr" type="xs:int"/>
+  <xs:element name="KundenName" type="xs:string"/>
+  <xs:element name="Adressen">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="lief:Absender" xmlns:lief="https://www.w3schools.com/lieferschein"/>
+        <xs:element ref="lief:Empfaenger" xmlns:lief="https://www.w3schools.com/lieferschein"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Lieferung">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="lief:Artikel" maxOccurs="unbounded" minOccurs="0" xmlns:lief="https://www.w3schools.com/lieferschein"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Lieferschein">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="lief:AuftragsNr" xmlns:lief="https://www.w3schools.com/lieferschein"/>
+        <xs:element ref="lief:AufragsDatum" xmlns:lief="https://www.w3schools.com/lieferschein"/>
+        <xs:element ref="lief:KundenNr" xmlns:lief="https://www.w3schools.com/lieferschein"/>
+        <xs:element ref="lief:KundenName" xmlns:lief="https://www.w3schools.com/lieferschein"/>
+        <xs:element ref="lief:Adressen" xmlns:lief="https://www.w3schools.com/lieferschein"/>
+        <xs:element ref="lief:Lieferung" xmlns:lief="https://www.w3schools.com/lieferschein"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,11 @@
+<!ELEMENT Status (AuftragsNr,AufragsDatum,KundenNr,KundenName,LieferStatus,MengeTotal,OffeneMenge,VersandteMenge,StornierteMenge,DatumAktualisiert)>
+<!ELEMENT AuftragsNr (#PCDATA)>
+<!ELEMENT AufragsDatum (#PCDATA)>
+<!ELEMENT KundenNr (#PCDATA)>
+<!ELEMENT KundenName (#PCDATA)>
+<!ELEMENT LieferStatus (#PCDATA)>
+<!ELEMENT MengeTotal (#PCDATA)>
+<!ELEMENT OffeneMenge (#PCDATA)>
+<!ELEMENT VersandteMenge (#PCDATA)>
+<!ELEMENT StornierteMenge (#PCDATA)>
+<!ELEMENT DatumAktualisiert (#PCDATA)>
