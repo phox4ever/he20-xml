@@ -1,0 +1,21 @@
+<!DOCTYPE Status [
+        <!ELEMENT Status (AuftragsNr,AufragsDatum,KundenNr,KundenName,LieferStatus,MengeTotal,OffeneMenge,DatumAktualisiert)>
+        <!ELEMENT AuftragsNr (#PCDATA)>
+        <!ELEMENT AufragsDatum (#PCDATA)>
+        <!ELEMENT KundenNr (#PCDATA)>
+        <!ELEMENT KundenName (#PCDATA)>
+        <!ELEMENT LieferStatus (#PCDATA)>
+        <!ELEMENT MengeTotal (#PCDATA)>
+        <!ELEMENT OffeneMenge (#PCDATA)>
+        <!ELEMENT DatumAktualisiert (#PCDATA)>
+        ]>
+<Status>
+    <AuftragsNr>123456</AuftragsNr>
+    <AufragsDatum>2023-01-01</AufragsDatum>
+    <KundenNr>123456</KundenNr>
+    <KundenName>Muster AG</KundenName>
+    <LieferStatus>Beim Kunden</LieferStatus>
+    <MengeTotal>3</MengeTotal>
+    <OffeneMenge>0</OffeneMenge>
+    <DatumAktualisiert>2023-01-08</DatumAktualisiert>
+</Status>

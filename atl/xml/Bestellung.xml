@@ -1,0 +1,85 @@
+<!DOCTYPE Bestellung [
+        <!ELEMENT Bestellung (BestellNr,BestellDatum,BestellZeit,KundenNr,KundenName,Adressen,Warenkorb,TotalPreis,TotalMWST)>
+        <!ELEMENT BestellNr (#PCDATA)>
+        <!ELEMENT BestellDatum (#PCDATA)>
+        <!ELEMENT BestellZeit (#PCDATA)>
+        <!ELEMENT KundenNr (#PCDATA)>
+        <!ELEMENT KundenName (#PCDATA)>
+        <!ELEMENT Adressen (Rechnungsadresse, Lieferadresse)>
+        <!ELEMENT Rechnungsadresse (Firma?,Anrede,Vorname,Name,Strasse,StrasseNr,PLZ,Ort,Land)>
+        <!ELEMENT Lieferadresse (Firma?,Anrede,Vorname,Name,Strasse,StrasseNr,PLZ,Ort,Land)>
+        <!ELEMENT Firma (#PCDATA)>
+        <!ELEMENT Anrede (#PCDATA)>
+        <!ELEMENT Vorname (#PCDATA)>
+        <!ELEMENT Name (#PCDATA)>
+        <!ELEMENT Strasse (#PCDATA)>
+        <!ELEMENT StrasseNr (#PCDATA)>
+        <!ELEMENT PLZ (#PCDATA)>
+        <!ELEMENT Ort (#PCDATA)>
+        <!ELEMENT Land (#PCDATA)>
+        <!ELEMENT Warenkorb (Artikel)+>
+        <!ELEMENT Artikel (ArtikelNummer,Bezeichnung,Menge,ArtikelPreis,Waehrung,MWST,MWSTSatz,TotalPreis)>
+        <!ELEMENT ArtikelNummer (#PCDATA)>
+        <!ELEMENT Bezeichnung (#PCDATA)>
+        <!ELEMENT Menge (#PCDATA)>
+        <!ELEMENT ArtikelPreis (#PCDATA)>
+        <!ELEMENT Waehrung (#PCDATA)>
+        <!ELEMENT MWST (#PCDATA)>
+        <!ELEMENT MWSTSatz (#PCDATA)>
+        <!ELEMENT TotalPreis (#PCDATA)>
+        <!ELEMENT TotalMWST (#PCDATA)>
+        ]>
+<Bestellung>
+    <BestellNr>123456</BestellNr>
+    <BestellDatum>2023-01-01</BestellDatum>
+    <BestellZeit>12:00:00</BestellZeit>
+    <KundenNr>123456</KundenNr>
+    <KundenName>Muster AG</KundenName>
+    <Adressen>
+        <Rechnungsadresse>
+            <Anrede>Herr</Anrede>
+            <Vorname>Hans</Vorname>
+            <Name>Muster</Name>
+            <Strasse>Musterstrasse</Strasse>
+            <StrasseNr>1</StrasseNr>
+            <PLZ>4132</PLZ>
+            <Ort>Muttenz</Ort>
+            <Land>Schweiz</Land>
+        </Rechnungsadresse>
+        <Lieferadresse>
+            <Firma>Muster AG</Firma>
+            <Anrede>Herr</Anrede>
+            <Vorname>Hans</Vorname>
+            <Name>Muster</Name>
+            <Strasse>Musterstrasse</Strasse>
+            <StrasseNr>1</StrasseNr>
+            <PLZ>4132</PLZ>
+            <Ort>Muttenz</Ort>
+            <Land>Schweiz</Land>
+        </Lieferadresse>
+    </Adressen>
+    <Warenkorb>
+        <Artikel>
+            <ArtikelNummer>10000001</ArtikelNummer>
+            <Bezeichnung>Sattel</Bezeichnung>
+            <Menge>1</Menge>
+            <ArtikelPreis>500</ArtikelPreis>
+            <Waehrung>CHF</Waehrung>
+            <MWST>38.5</MWST>
+            <MWSTSatz>7.7</MWSTSatz>
+            <TotalPreis>538.5</TotalPreis>
+        </Artikel>
+        <Artikel>
+            <ArtikelNummer>20000001</ArtikelNummer>
+            <Bezeichnung>Stiefel</Bezeichnung>
+            <Menge>2</Menge>
+            <ArtikelPreis>200</ArtikelPreis>
+            <Waehrung>CHF</Waehrung>
+            <MWST>30.8</MWST>
+            <MWSTSatz>7.7</MWSTSatz>
+            <TotalPreis>430.8</TotalPreis>
+        </Artikel>
+    </Warenkorb>
+    <TotalPreis>969.3</TotalPreis>
+    <TotalMWST>69.3</TotalMWST>
+</Bestellung>
